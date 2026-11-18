@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import Search from './search-component';
 
 describe('Search Component', () => {
@@ -12,14 +12,12 @@ describe('Search Component', () => {
      }
   }
   it('Render without error', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Search  { ...props} />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const { unmount } = render(<Search  { ...props} />);
+    unmount();
   });
   it('Allow search in input field', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Search  { ...props} />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const { unmount } = render(<Search  { ...props} />);
+    unmount();
   });
 
 })

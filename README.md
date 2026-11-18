@@ -15,8 +15,8 @@ Clone the repository by running `git clone git@github.com:koop4/mimoma.git`
 
 0. Move to the _mimoma_ folder `cd mimoma`
 1. Install dependencies `yarn`
-2. Start the project with `yarn start`
-3. Browser will open automatically at [localhost:3000](http://localhost:3000).
+2. Start the project with `yarn start` (Vite dev server)
+3. Open [localhost:5173](http://localhost:5173) in your browser.
 
 ## tests
 

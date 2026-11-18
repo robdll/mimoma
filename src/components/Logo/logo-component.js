@@ -10,7 +10,7 @@ const Logo = () => (
     <img
       className={style.logo}
       alt={`Website Logo`}
-      src={`${process.env.PUBLIC_URL}/svg/logo.svg`}
+      src={`${import.meta.env.BASE_URL}svg/logo.svg`}
     />
   </>
 );

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import App from '../App/app-component';
 
 describe('App Component', () => {
@@ -9,10 +9,8 @@ describe('App Component', () => {
   }
 
   it('renders DOM without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<App  { ...props}  />, div);
-    ReactDOM.unmountComponentAtNode(div);
-
+    const { unmount } = render(<App  { ...props}  />);
+    unmount();
   });
 
 })

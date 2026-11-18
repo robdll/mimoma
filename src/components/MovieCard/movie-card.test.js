@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import Card from './movie-card-component';
 
 describe('Search Component', () => {
@@ -12,14 +12,12 @@ describe('Search Component', () => {
      }
   }
   it('Render without error', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Card  { ...props} />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const { unmount } = render(<Card  { ...props} />);
+    unmount();
   });
   it('use fallback cover', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Card  { ...props} />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const { unmount } = render(<Card  { ...props} />);
+    unmount();
   });
 
 })
