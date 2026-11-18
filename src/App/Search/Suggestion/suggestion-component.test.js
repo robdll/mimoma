@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import Suggestion from './suggestion-component';
 
 describe('Suggestion Container', () => {
@@ -14,9 +14,8 @@ describe('Suggestion Container', () => {
     }
   }
   it('display possible results', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Suggestion  { ...props} />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const { unmount } = render(<Suggestion  { ...props} />);
+    unmount();
   });
 
 })

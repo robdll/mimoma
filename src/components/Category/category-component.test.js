@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import Category from './category-component';
 
 describe('Category Section', () => {
@@ -18,14 +18,12 @@ describe('Category Section', () => {
     }
   }
   it('display user list category', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Category  { ...props} />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const { unmount } = render(<Category  { ...props} />);
+    unmount();
   });
   it('display favorite list category', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Category  { ...props} />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const { unmount } = render(<Category  { ...props} />);
+    unmount();
   });
 
 })
