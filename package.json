@@ -6,7 +6,7 @@
   "type": "module",
   "homepage": "https://robdll.github.io/mimoma",
   "engines": {
-    "node": ">=18"
+    "node": ">=22.12"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
